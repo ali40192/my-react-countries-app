@@ -1,11 +1,17 @@
 import "./App.css";
-import Countries from "../componants/countries/countries";
+import Countries from "../componants/countries";
+import { Suspense } from "react";
+
+const allCountries = fetch("https://openapi.programming-hero.com/api/all").then(
+  (res) => res.json()
+);
 
 function App() {
   return (
     <>
-      <h1>React counties</h1>
-      <Countries></Countries>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Countries allCountries={allCountries}></Countries>
+      </Suspense>
     </>
   );
 }

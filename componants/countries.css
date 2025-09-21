@@ -1,0 +1,19 @@
+.countries {
+  width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  padding: 20px;
+}
+.flagged-countries {
+  border: 2px solid red;
+  padding: 10px;
+  margin: 20px 0;
+}
+.flag {
+  width: 10%;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+}
